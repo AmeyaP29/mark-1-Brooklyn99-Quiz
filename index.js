@@ -74,6 +74,8 @@ function game() {
 
   console.log("Hi " + chalk.yellowBright(uName) + " let's play a game to see how big of a Brooklyn99 fan you are!");
 
+  console.log("\nWrong answers don't end the quiz, so we enourage you to play till the end, to see how much you score.\n\nNow, let's begin:")
+
   for (var i = 0; i < questions.length; i++) {
     play(questions[i]);
   }
@@ -91,7 +93,7 @@ function play(q) {
     console.log(chalk.green("Right answer!\n") + chalk.blue("Score:" + score) + "\n-------------------------------------------------------\n");
   }
   else
-    console.log(chalk.red("Wrong answer!\n") + chalk.blue("Score:" + score) + "\n-------------------------------------------------------\n");
+    console.log(chalk.red("Wrong answer!\n") + chalk.yellowBright("The correct answer is: " + (q.answer)) + chalk.blue("\nScore:" + score) + "\n-------------------------------------------------------\n");
 
 }
 
